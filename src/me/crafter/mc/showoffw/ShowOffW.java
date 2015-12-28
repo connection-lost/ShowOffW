@@ -16,7 +16,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class ShowOffS extends JavaPlugin {
+public class ShowOffW extends JavaPlugin {
 
 	public final Logger logger = Logger.getLogger("Mincraft");
 	public Chat chat;
