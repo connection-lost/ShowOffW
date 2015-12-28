@@ -20,13 +20,16 @@ public class ShowOffW extends JavaPlugin {
 
 	public final Logger logger = Logger.getLogger("Mincraft");
 	public Chat chat;
+	private String chatformat = "%name%";
 
     public void onEnable(){
         if (setupChat()){
-        	logger.info("[ShowOff] Using Vault!");
+        	//logger.info("[ShowOff] Using Vault!");
         } else {
         	chat = null;
         }
+        this.saveDefaultConfig();
+        this.chatformat = this.getConfig().getString("playernameformat", "%name%");
     }
  
 
@@ -127,8 +130,12 @@ public class ShowOffW extends JavaPlugin {
     }
     
     public String getPlayerName(Player p){
-    	if (chat == null) return p.getName();
-    	return ChatColor.translateAlternateColorCodes("&".charAt(0), (chat.getPlayerPrefix(p)+p.getName()+chat.getPlayerSuffix(p)));
+    	String ret = chatformat;
+    	ret = ret.replace("%name%", p.getName()).replace("%disp%", p.getDisplayName());
+    	if (chat != null){
+        	ret = ret.replace("%pre%", chat.getPlayerPrefix(p)).replace("%suf%", chat.getPlayerSuffix(p));
+    	}
+    	return ChatColor.translateAlternateColorCodes("&".charAt(0), (chatformat));
     }
 	
 }
