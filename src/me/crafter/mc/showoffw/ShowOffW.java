@@ -68,9 +68,9 @@ public class ShowOffW extends JavaPlugin {
     		if (cmd.getName().equals("showoff")) {
         		FancyMessage fm = new FancyMessage(playername + " 展示物品: ");
         		
-        		if (args.length == 1 && args[0].equals("1")){
-        			fm = new FancyMessage(playername + ": 我有 ");
-        		}
+//        		if (args.length == 1 && args[0].equals("1")){
+//        			fm = new FancyMessage(playername + ": 我有 ");
+//        		}
         		
         		if (!itemname.equals(itemdisplayname)){
             		fm.then(itemdisplayname + "(" + itemname + ")" + multiplier);
@@ -78,9 +78,9 @@ public class ShowOffW extends JavaPlugin {
         			fm.then(itemdisplayname + multiplier).color(ChatColor.AQUA);
         		}
         		fm.itemTooltip(item);
-        		if (args.length == 1 && args[0].equals("1")){
-        			fm.then(" 你怕不怕，怕不怕?").color(ChatColor.WHITE);
-        		}
+//        		if (args.length == 1 && args[0].equals("1")){
+//        			fm.then(" 你怕不怕，怕不怕?").color(ChatColor.WHITE);
+//        		}
     			for (Player player : Bukkit.getOnlinePlayers()){
     				fm.send(player);
     			}
@@ -98,18 +98,18 @@ public class ShowOffW extends JavaPlugin {
     		return true;
     	}
     	
-    	if (cmd.getName().equals("i")){
-    		Player p = (Player)sender;
-    		String playername = getPlayerName(p);
-    		FancyMessage fm = new FancyMessage(playername);
-    		fm.suggest("/tell " + p.getName() + " ");
-    		fm.tooltip(ChatColor.GRAY + "点击私聊");
-    		fm.then(": ");
-    		fm.then("我在" + p.getWorld().getName() + "世界，坐标 x" + p.getLocation().getBlockX() + " y" + p.getLocation().getBlockY() + " z" + p.getLocation().getBlockZ());
-			for (Player player : Bukkit.getOnlinePlayers()){
-				fm.send(player);
-			}			
-    	}
+//    	if (cmd.getName().equals("i")){
+//    		Player p = (Player)sender;
+//    		String playername = getPlayerName(p);
+//    		FancyMessage fm = new FancyMessage(playername);
+//    		fm.suggest("/tell " + p.getName() + " ");
+//    		fm.tooltip(ChatColor.GRAY + "点击私聊");
+//    		fm.then(": ");
+//    		fm.then("我在" + p.getWorld().getName() + "世界，坐标 x" + p.getLocation().getBlockX() + " y" + p.getLocation().getBlockY() + " z" + p.getLocation().getBlockZ());
+//			for (Player player : Bukkit.getOnlinePlayers()){
+//				fm.send(player);
+//			}			
+//    	}
     	
     	return true;
     }
