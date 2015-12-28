@@ -1,6 +1,6 @@
-name: ShowOffS
+name: ShowOffW
 version: 2.0
-main: me.crafter.mc.showoffs.ShowOffS
+main: me.crafter.mc.showoffw.ShowOffW
 description: >
              Show your item to other players.
 commands:

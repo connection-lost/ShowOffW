@@ -1,4 +1,4 @@
-package me.crafter.mc.showoffs;
+package me.crafter.mc.showoffw;
 
 import java.util.logging.Logger;
 
