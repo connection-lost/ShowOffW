@@ -1,18 +1,18 @@
 name: ShowOffW
-version: 2.0
+version: 3.0
 main: me.crafter.mc.showoffw.ShowOffW
 description: >
              Show your item to other players.
 commands:
    showoff:
-      permission: showoff.use
+      permission: showoff.showoff
       usage: |
          /showoff
    showto:
-      permission: showoff.use
+      permission: showoff.showto
       usage: |
          /showto <Player>
    i:
-      permission: showoff.use
+      permission: showoff.i
       usage: |
          /i
