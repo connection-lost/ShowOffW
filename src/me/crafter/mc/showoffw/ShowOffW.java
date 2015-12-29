@@ -135,7 +135,7 @@ public class ShowOffW extends JavaPlugin {
     	if (chat != null){
         	ret = ret.replace("%pre%", chat.getPlayerPrefix(p)).replace("%suf%", chat.getPlayerSuffix(p));
     	}
-    	return ChatColor.translateAlternateColorCodes("&".charAt(0), (chatformat));
+    	return ChatColor.translateAlternateColorCodes("&".charAt(0), (ret));
     }
 	
 }
